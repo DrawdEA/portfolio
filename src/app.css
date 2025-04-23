@@ -2,15 +2,13 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
-@theme {
-    --font-tommy: 'Made Tommy', sans-serif;
+@font-face {
+    font-family: Nexa;
+    src: url('/static/fonts/Nexa-Heavy.ttf');
 }
 
-@font-face {
-    font-family: 'Made Tommy';
-    font-style: 'normal';
-    src: local('Made Tommy'), local('Made-Tommy'), local('made tommy'), local('Mmade-tommy'),
-        url('/static/fonts/madetommy.otf') format("otf");
-    font-weight: normal;
-    font-display: swap;
+@theme {
+    --font-nexa: Nexa, serif;
 }
+
+
