@@ -4,7 +4,7 @@
 	let { children } = $props();
 </script>
 
-<div class="flex flex-col items-center gap-5 bg-black h-screen text-white">
+<div class="flex flex-col items-center gap-5 bg-black h-screen bg-cover overflow-auto text-white">
 	{@render children()}
 </div>
 
