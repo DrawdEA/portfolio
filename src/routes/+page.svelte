@@ -19,6 +19,15 @@
     import django from "$lib/images/logos/django.svg";
     import numpy from "$lib/images/logos/numpy.svg";
     import vercel from "$lib/images/logos/vercel.svg";
+
+    // Project Images
+    import cardgame from "$lib/images/projects/cardgame.png";
+    import cs50finance from "$lib/images/projects/cs50finance.png";
+    import dormvouch from "$lib/images/projects/dormvouch.png";
+    import guessmyprompt from "$lib/images/projects/guessmyprompt.png";
+    import todolist from "$lib/images/projects/todolist.png";
+    import weatherapp from "$lib/images/projects/weatherapp.png";
+    import zengarden from "$lib/images/projects/zengarden.png";
 </script>
 
 <div class="text-3xl flex flex-col gap-100 mt-50 items-center">
@@ -27,7 +36,7 @@
             <p class="text-8xl">Hello,</p>
             <p class="text-6xl pb-3">I'm Edward Diesta.</p>
             <p class="text-3xl">
-                <span class="bg-red-800">A Software Engineer.</span>
+                <span class="bg-red-800">A Software Engineer</span>.
             </p>
         </div>
         <div>
@@ -36,14 +45,14 @@
     </div>
 
     <div class="flex flex-col items-center">
-        <p class="pb-15 text-5xl">Here are some of the things I'm working on.</p>
-        <Project projectName="Guess-My-Prompt Web Game" fileName="guessmyprompt.png" tools={["Next.JS", "Zustand", "TailwindCSS", "DeepSeek R1 API"]} />
-        <Project projectName="Weather App" fileName="weatherapp.png" tools={["JavaScript", "HTML", "CSS", "Weather Crossing API"]} />
-        <Project projectName="To-Do List" fileName="todolist.png" tools={["JavaScript", "HTML", "CSS"]} />
-        <Project projectName="DormVouch" fileName="dormvouch.png" tools={["JavaScript", "HTML", "CSS"]} />
-        <Project projectName="Ateneo Zen Garden Scenery Game" fileName="zengarden.png" tools={["Java", "Swing"]} />
-        <Project projectName="C$50 Finance Stocks Simulator" fileName="cs50finance.png" tools={["Flask", "JavaScript", "HTML", "CSS"]} />
-        <Project projectName="RPG-Esque Card Game" fileName="cardgame.png" tools={["Java", "Swing"]} />
+        <p class="pb-15 text-5xl">Here are some of the things <span class="bg-red-800">I'm working on</span>.</p>
+        <Project projectName="Weather App" image={weatherapp} tools={["JavaScript", "HTML", "CSS", "Weather Crossing API"]} />
+        <Project projectName="Guess My Prompt" image={guessmyprompt} tools={["Next.JS", "Zustand", "TailwindCSS", "DeepSeek R1 API"]} />
+        <Project projectName="To-Do List" image={todolist} tools={["JavaScript", "HTML", "CSS"]} />
+        <Project projectName="DormVouch" image={dormvouch} tools={["JavaScript", "HTML", "CSS"]} />
+        <Project projectName="Ateneo Zen Garden Scenery Game" image={zengarden} tools={["Java", "Swing"]} />
+        <Project projectName="C$50 Finance Stocks Simulator" image={cs50finance} tools={["Flask", "JavaScript", "HTML", "CSS"]} />
+        <Project projectName="RPG Card Game" image={cardgame} tools={["Java", "Swing"]} />
     </div>
 
     <div class="flex flex-col items-center">
