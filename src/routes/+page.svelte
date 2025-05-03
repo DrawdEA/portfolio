@@ -28,38 +28,151 @@
     import todolist from "$lib/images/projects/todolist.png";
     import weatherapp from "$lib/images/projects/weatherapp.png";
     import zengarden from "$lib/images/projects/zengarden.png";
+
+    // Import animation
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import { SplitText } from "gsap/SplitText";
+	import { onMount } from 'svelte';
+	
+
+    onMount(() => {
+        gsap.registerPlugin(ScrollTrigger, SplitText);
+
+        // Hero texts.
+        let tl = gsap.timeline();
+
+        let heroSplit = SplitText.create("#edward", {
+            type: "words"
+        })
+
+        let softwareSplit = SplitText.create("#role", {
+            type: "words"
+        })
+
+        tl
+        .from("#hello", {
+            duration: 0.5,
+            y: "100%",
+            opacity: 0,
+            yoyo: true
+        })
+        .from(heroSplit.words, {
+            opacity: 0,
+            duration: 1,
+            y: "100%",
+            stagger: 0.1
+        }, "+=0.1")
+        .from("#portrait", {
+            opacity: 0,
+            duration: 0.5,
+        }, "+=0.1")
+        .from(softwareSplit.words, {
+            opacity: 0,
+            y: "100%",
+            duration: 1,
+            stagger: 0.1
+        }, "+=0.1")
+        .fromTo("#software", {
+            backgroundColor: "#000000",
+        }, {
+            backgroundColor: "#1c398e",
+            duration: 0.5,
+        })
+
+        // First text.
+        let split = SplitText.create(".animatedText", {
+            type: "words"
+        })
+
+        let texttl = gsap.timeline({scrollTrigger: {
+            trigger: split.words,
+            toggleActions: "restart none none none",
+            start: "top 100%",
+            end: "bottom 100%",
+        }});
+
+        texttl.from(split.words, {
+            y: "200%",
+            autoAlpha: 0,
+            stagger: 0.1,
+            opacity: 0
+        }).fromTo("#engineer", {
+            backgroundColor: "#000000",
+        }, {
+            backgroundColor: "#1c398e",
+            duration: 0.3,
+        })
+
+        // Second text.
+        let split2 = SplitText.create(".animatedText2", {
+            type: "words"
+        })
+
+        let texttl2 = gsap.timeline({scrollTrigger: {
+            trigger: split2.words,
+            toggleActions: "restart resume resume resume",
+            start: "top 100%",
+            end: "bottom 100%",
+        }});
+
+        texttl2.from(split2.words, {
+            y: "200%",
+            autoAlpha: 0,
+            stagger: 0.1,
+            opacity: 0
+        }).fromTo("#create", {
+            backgroundColor: "#000000",
+        }, {
+            backgroundColor: "#1c398e",
+            duration: 0.3,
+        })
+
+        // Tools.
+        gsap.from(".tool", {
+            scrollTrigger: {
+                trigger: ".tool",
+                toggleActions: "restart pause resume pause",
+                start: "-10% 90%",
+                end: "400% 90%",
+                scrub: 1
+            },
+            ease: "power1.out",
+            y: "200%",
+            duration: 0.5,
+            stagger: 0.05
+        })
+    })
 </script>
 
 <div class="text-3xl flex flex-col gap-100 mt-50 items-center">
     <div class="flex gap-20 justify-center items-center">
         <div class="flex flex-col">
-            <p class="text-8xl">Hello,</p>
-            <p class="text-6xl pb-3">I'm Edward Diesta.</p>
-            <p class="text-3xl">
-                <span class="bg-red-800">A Software Engineer</span>.
-            </p>
+            <p class="text-8xl" id="hello">Hello,</p>
+            <p class="text-6xl pb-3" id="edward">I'm Edward Diesta.</p>
+            <p class="text-3xl" id="role">A <span class="bg-blue-900" id="software">Software Engineer</span>.</p>
         </div>
         <div>
-            <img src={selfPortrait} alt="Self Protrait" class="h-75 w-75 object-fit rounded-full">
+            <img src={selfPortrait} alt="Self Protrait" class="h-75 w-75 object-fit rounded-full" id="portrait">
         </div>
     </div>
 
     <div class="flex flex-col items-center">
-        <p class="pb-15 text-5xl">Here are some of the things <span class="bg-red-800">I'm working on</span>.</p>
+        <p class="pb-15 text-center text:sm xl:text-5xl animatedText">Here are some of the things <span class="bg-blue-900" id="engineer">I'm working on</span>.</p>
         <Project projectName="Weather App" image={weatherapp} tools={["JavaScript", "HTML", "CSS", "Weather Crossing API"]} />
         <Project projectName="Guess My Prompt" image={guessmyprompt} tools={["Next.JS", "Zustand", "TailwindCSS", "DeepSeek R1 API"]} />
         <Project projectName="To-Do List" image={todolist} tools={["JavaScript", "HTML", "CSS"]} />
         <Project projectName="DormVouch" image={dormvouch} tools={["JavaScript", "HTML", "CSS"]} />
         <Project projectName="Ateneo Zen Garden Scenery Game" image={zengarden} tools={["Java", "Swing"]} />
-        <Project projectName="C$50 Finance Stocks Simulator" image={cs50finance} tools={["Flask", "JavaScript", "HTML", "CSS"]} />
+        <Project projectName="Finance Stocks Simulator" image={cs50finance} tools={["Flask", "JavaScript", "HTML", "CSS"]} />
         <Project projectName="RPG Card Game" image={cardgame} tools={["Java", "Swing"]} />
     </div>
 
     <div class="flex flex-col items-center">
-        <p class="pb-15 text-5xl">
-            These are what I use to <span class="bg-red-800">create</span>.
+        <p class="pb-15 text-5xl animatedText2">
+            These are what I use to <span class="bg-blue-900" id="create">create</span>.
         </p>
-        <div class="grid grid-cols-5 grid-rows-5 gap-10">
+        <div class="grid grid-cols-6 grid-rows-5 gap-10">
             <TechTool toolName="Next.JS" image={nextjs} />
             <TechTool toolName="Svelte" image={svelte} />
             <TechTool toolName="TailwindCSS" image={tailwind} />

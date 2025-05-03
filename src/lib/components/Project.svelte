@@ -8,15 +8,22 @@
     const { projectName = "Unknown Project", image = cardgame, tools = ["Tool 1", "Tool 2", "Tool 3", "Tool 4"] } = $props();
 
     onMount(() => {
-        gsap.to(`#${projectName.replaceAll(" ", "")}`, {
+        gsap.from(`#${projectName.replaceAll(" ", "")}`, {
             scrollTrigger: {
                 trigger: `#${projectName.replaceAll(" ", "")}`,
-                markers: true
+                toggleActions: "restart pause resume pause",
+                start: "-105% 90%",
+                end: "20% 90%",
+                scrub: 1
             },
-            y: "-100%",
-            duration: 1,
+            ease: "power1.in",
+            y: "100%",
+            duration: 0.5,
+            width: 300
         })
     })
+
+
 </script>
 
 <div 
