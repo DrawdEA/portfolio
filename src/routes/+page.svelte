@@ -133,8 +133,8 @@
             scrollTrigger: {
                 trigger: ".tool",
                 toggleActions: "restart pause resume pause",
-                start: "-10% 90%",
-                end: "400% 90%",
+                start: "-100% 100%",
+                end: "200% 100%",
                 scrub: 1
             },
             ease: "power1.out",
@@ -146,19 +146,19 @@
 </script>
 
 <div class="text-3xl flex flex-col gap-100 mt-50 items-center">
-    <div class="flex gap-20 justify-center items-center">
-        <div class="flex flex-col">
-            <p class="text-8xl" id="hello">Hello,</p>
-            <p class="text-6xl pb-3" id="edward">I'm Edward Diesta.</p>
-            <p class="text-3xl" id="role">A <span class="bg-blue-900" id="software">Software Engineer</span>.</p>
+    <div class="flex max-md:flex-col gap-20 justify-center items-center">
+        <div class="flex flex-col max-md:items-center">
+            <p class="text-5xl sm:text-6xl md:text-7xl xl:text-8xl" id="hello">Hello,</p>
+            <p class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl pb-3" id="edward">I'm Edward Diesta.</p>
+            <p class="text-lg sm:text-xl md:text-2xl xl:text-3xl" id="role">A <span class="bg-blue-900" id="software">Software Engineer</span>.</p>
         </div>
         <div>
-            <img src={selfPortrait} alt="Self Protrait" class="h-75 w-75 object-fit rounded-full" id="portrait">
+            <img src={selfPortrait} alt="Self Protrait" class="h-55 w-55 md:h-60 md:w-60 xl:h-75 xl:w-75 object-fit rounded-full" id="portrait">
         </div>
     </div>
 
-    <div class="flex flex-col items-center">
-        <p class="pb-15 text-center text:sm xl:text-5xl animatedText">Here are some of the things <span class="bg-blue-900" id="engineer">I'm working on</span>.</p>
+    <div class="flex flex-col items-auto object-cover">
+        <p class="pb-15 text-center text-3xl md:text-4xl xl:text-5xl break-normal mx-5 animatedText">Here are some of the things <span class="bg-blue-900" id="engineer">I'm working on</span>.</p>
         <Project projectName="Weather App" image={weatherapp} tools={["JavaScript", "HTML", "CSS", "Weather Crossing API"]} />
         <Project projectName="Guess My Prompt" image={guessmyprompt} tools={["Next.JS", "Zustand", "TailwindCSS", "DeepSeek R1 API"]} />
         <Project projectName="To-Do List" image={todolist} tools={["JavaScript", "HTML", "CSS"]} />
@@ -169,10 +169,10 @@
     </div>
 
     <div class="flex flex-col items-center">
-        <p class="pb-15 text-5xl animatedText2">
+        <p class="pb-15 text-center text-3xl md:text-4xl xl:text-5xl break-normal mx-5 animatedText2">
             These are what I use to <span class="bg-blue-900" id="create">create</span>.
         </p>
-        <div class="grid grid-cols-6 grid-rows-5 gap-10">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5 items-stretch justify-stretch mb-50">
             <TechTool toolName="Next.JS" image={nextjs} />
             <TechTool toolName="Svelte" image={svelte} />
             <TechTool toolName="TailwindCSS" image={tailwind} />
