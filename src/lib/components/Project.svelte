@@ -22,8 +22,6 @@
             opacity: 0
         })
     })
-
-
 </script>
 
 <div 
