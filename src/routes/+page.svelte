@@ -29,6 +29,13 @@
     import weatherapp from "$lib/images/projects/weatherapp.png";
     import zengarden from "$lib/images/projects/zengarden.png";
 
+    // About Me Images
+    import imsummit1 from "$lib/images/aboutme/imsummit1.jpg";
+    import imsummit2 from "$lib/images/aboutme/imsummit2.jpg";
+    import imsummit3 from "$lib/images/aboutme/imsummit3.jpg";
+    import ateneo from "$lib/images/aboutme/ateneo.png";
+    import compsat from "$lib/images/aboutme/compsat.png";
+
     // Import animation
     import { gsap } from "gsap";
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -194,118 +201,131 @@
         </div>
     </div>
 
-    <div class="flex flex-col items-center bg-[#252525] w-100% pb-50 pt-20 gap-4">
-        <div class="flex flex-col justify-center items-center h-auto w-7/10 bg-black rounded-4xl gap-4 tool p-10">
-            <p class="text-4xl 3">Hello</p>
-            <p class="text-xl">
-                As an avid problem-solver, I am always on the lookout to learn new things. 
-                What helps me keep motivated is that I seek to create things that can help 
-                other people in various nifty ways, which is usually how I plan out my future 
-                projects!
-            </p>
-        </div>
+    <div class="flex flex-col items-center bg-[#252525] w-100% pb-50 pt-20 ">
+        <div class="flex flex-col items-center w-7/10 gap-4">
 
-        <div class="flex flex-col justify-center items-center h-auto w-7/10 bg-black rounded-4xl gap-4 tool p-10">
-            <p class="text-4xl 3">ROBLOX!</p>
-            <p class="text-xl">
-                The first time I was actually exposed to programming was back when I was in Grade 5! 
-                Trying to make a quick buck, I learned the scripting language LUA through youtube tutorials 
-                over the summer break. While the games I made wasn’t very fruitful, I definitely think that 
-                it sparked my passion for developing and building things now.
+            <p class="pb-15 text-center text-3xl md:text-4xl xl:text-5xl break-normal mx-5 animatedText2">
+                About Me
             </p>
-        </div>
 
-        <div class="flex flex-col justify-center items-center h-auto w-7/10 bg-black rounded-4xl gap-4 tool p-10">
-            <p class="text-4xl 3">Away From Keyboard</p>
-            <p class="text-xl">
-                Aside from coding, I usually like to exercise at our dorm gym, play with friends through 
-                discord calls, and send random Instagram reels to them throughout the day. I like to think 
-                that these things that I do outside of my career helps me keep inspired and keep thinking 
-                of new creative ways to think about things.
-            </p>
-        </div>
+            <div class="flex flex-col items-center h-auto w-full bg-black rounded-4xl gap-4 tool p-10">
+                <p class="text-xl">
+                    As an avid problem-solver, I am always on the lookout to learn new things. 
+                    What helps me keep motivated is that I seek to create things that can help 
+                    other people in various nifty ways, which is usually how I plan out my future 
+                    projects!
+                </p>
+            </div>
 
-        <div class="flex flex-col justify-center items-center h-auto w-7/10 bg-black rounded-4xl gap-4 tool p-10">
-            <p class="text-4xl 3">Away From Keyboard</p>
-            <p class="text-xl">
-                Aside from coding, I usually like to exercise at our dorm gym, play with friends through 
-                discord calls, and send random Instagram reels to them throughout the day. I like to think 
-                that these things that I do outside of my career helps me keep inspired and keep thinking 
-                of new creative ways to think about things.
-            </p>
-        </div>
-        
-        <div class="flex flex-col justify-center items-center h-auto w-7/10 bg-black rounded-4xl gap-4 tool p-10">
-            <p class="text-4xl 3">Like what you see? Let's connect!</p>
-            <p class="text-xl">
-                BUTTON BUTTON BUTTON
-            </p>
-        </div>
+            <div class="flex gap-4">
+                <div class="flex flex-col items-center h-auto w-2/5 bg-black rounded-4xl gap-4 tool p-10">
+                    <p class="text-4xl text-center">ROBLOX!</p>
+                    <p class="text-xl">
+                        The first time I was actually exposed to programming was back when I was in Grade 5! 
+                        Trying to make a quick buck, I learned the scripting language LUA through youtube tutorials 
+                        over the summer break. While the games I made wasn’t very fruitful, I definitely think that 
+                        it sparked my passion for developing and building things now.
+                    </p>
+                </div>
 
-        <div class="flex flex-col justify-center items-center h-auto w-7/10 bg-black rounded-4xl gap-4 tool p-10">
-            <p class="text-4xl 3">One Big Fight!</p>
-            <p class="text-xl">
-                I am currently a Computer Science at Ateneo de Manila University. I am particularly proud of this, 
-                especially since I am an Ateneo Freshman Merit Scholar! (Only the top 60 out of all the passers 
-                receive this award, the highest possible distinction awarded to first-year students!)
-            </p>
-            <p class="text-xl">
-                Aside from Ateneo, I can also proudly say that I’ve passed the Big 4! 
-                These include University of the Philippines - Diliman, De La Salle University, 
-                and University of Santo Tomas, all in BS Computer Science! 
-            </p>
-        </div>
+                <div class="flex flex-col gap-4 w-3/5">
+                    <div class="flex flex-col items-center h-auto full bg-black rounded-4xl gap-4 tool p-10">
+                        <p class="text-4xl text-center">Away From Keyboard</p>
+                        <p class="text-xl">
+                            Aside from coding, I usually like to exercise at our dorm gym, play with friends through 
+                            discord calls, and send random Instagram reels to them throughout the day. I like to think 
+                            that these things that I do outside of my career helps me keep inspired and keep thinking 
+                            of new creative ways to think about things.
+                        </p>
+                    </div>
 
-        <div class="flex flex-col justify-center items-center h-auto w-7/10 bg-black rounded-4xl gap-4 tool p-10">
-            <p class="text-4xl 3">I do orgworks too</p>
-            <p class="text-xl">
-                As of right now, I am most active in my course’s home org, The Computer Society of the Ateneo. 
-                Here, I really try to hone my management and communication skills by working with other people 
-                by organizing events. So far, I’ve been a Marketing Core Team for Blue Hacks 2025, our org’s 
-                yearly flagship event.
-            </p>
-        </div>
+                    <div class="flex flex-col items-center h-auto w-full bg-black rounded-4xl gap-4 tool p-10">
+                        <p class="text-4xl text-center">Like what you see? Let's connect!</p>
+                        <p class="text-xl">
+                            BUTTON BUTTON BUTTON
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex gap-4">
+                <div class="flex flex-col items-center h-auto w-5/8 bg-black rounded-4xl gap-4 tool p-10">
+                    <p class="text-4xl text-center">One Big Fight!</p>
+                    <img src={ateneo} alt="Ateneo Logo" class="h-40 my-4 object-contain">
+                    <p class="text-xl">
+                        I am currently a Computer Science at Ateneo de Manila University. I am particularly proud of this, 
+                        especially since I am an Ateneo Freshman Merit Scholar! (Only the top 60 out of all the passers 
+                        receive this award, the highest possible distinction awarded to first-year students!)
+                    </p>
+                    <p class="text-xl">
+                        Aside from Ateneo, I can also proudly say that I’ve passed the Big 4! 
+                        These include University of the Philippines - Diliman, De La Salle University, 
+                        and University of Santo Tomas, all in BS Computer Science! 
+                    </p>
+                </div>
 
-        <div class="flex flex-col justify-center items-center h-auto w-7/10 bg-black rounded-4xl gap-4 tool p-10">
-            <p class="text-4xl 3">I love learning..</p>
-            <p class="text-xl">
-                I really like learning new things, especially endeavors related to my field. Whether it’s 
-                through online courses, tutorials, or hands-on projects, I love exploring new topics and 
-                pushing myself to grow. I believe that staying curious and open to new ideas is the key 
-                to personal and professional growth. Here are some of the courses I've finished so far:
-            </p>
-        </div>
+                <div class="flex flex-col items-center h-auto w-3/8 bg-black rounded-4xl gap-4 tool p-10">
+                    <p class="text-4xl 3">I do orgworks too</p>
+                    <img src={compsat} alt="CompSAt Logo" class="h-30 my-4 object-contain">
+                    <p class="text-xl">
+                        As of right now, I am most active in my course’s home org, The Computer Society of the Ateneo. 
+                        Here, I really try to hone my management and communication skills by working with other people 
+                        by organizing events. So far, I’ve been a Marketing Core Team for Blue Hacks 2025, our org’s 
+                        yearly flagship event.
+                    </p>
+                </div>
+            </div>
 
-        <div class="flex flex-col justify-center items-center h-auto w-7/10 bg-black rounded-4xl gap-4 tool p-10">
-            <p class="text-4xl 3">CS50</p>
-            <p class="text-xl">
-                CS50's Introduction to Computer Science
-            </p>
-        </div>
+            <div class="flex flex-col items-center h-auto w-full bg-black rounded-4xl gap-4 tool p-10">
+                <p class="text-4xl">I love learning..</p>
+                <p class="text-xl">
+                    I really like learning new things, especially endeavors related to my field. Whether it’s 
+                    through online courses, tutorials, or hands-on projects, I love exploring new topics and 
+                    pushing myself to grow. I believe that staying curious and open to new ideas is the key 
+                    to personal and professional growth. Here are some of the courses I've finished so far:
+                </p>
+            </div>
 
-        <div class="flex flex-col justify-center items-center h-auto w-7/10 bg-black rounded-4xl gap-4 tool p-10">
-            <p class="text-4xl 3">Machine Learning Specialization</p>
-            <p class="text-xl">
-                Introduction to AI
-            </p>
-        </div>
+            <div class="flex gap-4">
+                <div class="flex flex-col items-center h-auto w-full bg-black rounded-4xl gap-4 tool p-10">
+                    <p class="text-4xl text-center">CS50</p>
+                    <p class="text-xl">
+                        CS50's Introduction to Computer Science
+                    </p>
+                </div>
 
-        <div class="flex flex-col justify-center items-center h-auto w-7/10 bg-black rounded-4xl gap-4 tool p-10">
-            <p class="text-4xl 3">The Odin Project</p>
-            <p class="text-xl">
-                Full-Stack Development
-            </p>
-        </div>
+                <div class="flex flex-col items-center h-auto w-full bg-black rounded-4xl gap-4 tool p-10">
+                    <p class="text-4xl text-center">Machine Learning Specialization</p>
+                    <p class="text-xl">
+                        Introduction to AI
+                    </p>
+                </div>
 
-        <div class="flex flex-col justify-center items-center h-auto w-auto bg-black rounded-4xl gap-4 tool p-10 mx-5">
-            <p class="text-4xl 3">..and I also like competing!</p>
-            <p class="text-xl">
-                When I have the time, I also like to compete. Recently, me and a few friends have just competed in an
-                IT Business Case competition, where we were challenged to propose a solution to a real-world problem.
-                We were able to land in the top 10.
-            </p>
-        </div>
+                <div class="flex flex-col items-center h-auto w-full bg-black rounded-4xl gap-4 tool p-10">
+                    <p class="text-4xl text-center">The Odin Project</p>
+                    <p class="text-xl">
+                        Full-Stack Development
+                    </p>
+                </div>
+            </div>
 
+            
+
+            <div class="flex flex-col items-center h-auto w-full bg-black rounded-4xl gap-4 tool p-10">
+                <p class="text-4xl 3">..and I also like competing!</p>
+                <p class="text-xl">
+                    When I have the time, I also like to compete. Recently, me and a few friends have just competed in an
+                    IT Business Case competition, where we were challenged to propose a solution to a real-world problem.
+                    We were able to land in the top 10.
+                </p>
+                <div class="flex gap-8 mt-5 justify-center">
+                    <img src={imsummit1} alt="IM Summit Documentation 1" class="w-1/3 h-50 rounded-4xl object-cover">
+                    <img src={imsummit2} alt="IM Summit Documentation 2" class="w-1/3 h-50 rounded-4xl object-cover">
+                    <img src={imsummit3} alt="IM Summit Documentation 3" class="w-1/3 h-50 rounded-4xl object-cover">
+                </div>
+                
+            </div>
+        </div>
     </div>
 </div>
 
