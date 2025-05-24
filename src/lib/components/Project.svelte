@@ -11,12 +11,12 @@
         gsap.from(`#${projectName.replaceAll(" ", "")}`, {
             scrollTrigger: {
                 trigger: `#${projectName.replaceAll(" ", "")}`,
-                toggleActions: "restart pause resume pause",
+                toggleActions: "play none none none",
                 start: "-105% 90%",
                 end: "20% 90%",
-                scrub: 1
+                scrub: 1,
+                once: true
             },
-            ease: "power1.in",
             y: "100%",
             duration: 0.5,
             opacity: 0
