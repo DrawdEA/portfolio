@@ -44,7 +44,7 @@
 
     // Import animation
     import { gsap } from "gsap";
-    import pkg from "gsap/ScrollTrigger";
+    import pkg from "gsap/dist/ScrollTriggerScrollTrigger";
     const ScrollTrigger = pkg;
     import { SplitText } from "gsap/SplitText";
 	import { onMount } from 'svelte';
