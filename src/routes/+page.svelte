@@ -156,8 +156,7 @@
                     start: "100% 100%",
                     end: "100% 100%",
                     scrub: 1,
-                    once: true,
-                    markers: true
+                    once: true
                 },
 
                 y: "200%",
