@@ -214,7 +214,7 @@
         <p class="pb-15 text-center text-3xl md:text-4xl xl:text-5xl break-normal mx-5 animatedText2">
             These are what I use to <span class="bg-blue-900" id="create">create</span>.
         </p>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5 items-stretch justify-stretch">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 items-stretch justify-stretch">
             <TechTool toolName="Next.JS" image={nextjs} />
             <TechTool toolName="Svelte" image={svelte} />
             <TechTool toolName="TailwindCSS" image={tailwind} />
