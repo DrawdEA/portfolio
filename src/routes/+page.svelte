@@ -63,8 +63,6 @@
             type: "words"
         })
 
-    
-
         tl
         .to(".maindiv", {
             duration: 0,
@@ -158,7 +156,8 @@
                     start: "100% 100%",
                     end: "100% 100%",
                     scrub: 1,
-                    once: true
+                    once: true,
+                    markers: true
                 },
 
                 y: "200%",
@@ -189,7 +188,7 @@
     })
 </script>
 
-<div class="text-3xl flex flex-col gap-100 mt-50 w-full items-center">
+<div class="text-3xl flex flex-col gap-100 mt-30 md:mt-40 xl:mt-50 w-full items-center">
     <div class="flex max-md:flex-col gap-20 justify-center items-center opacity-0 maindiv">
         <div class="flex flex-col max-md:items-center">
             <p class="text-5xl sm:text-6xl md:text-7xl xl:text-8xl" id="hello">Hello,</p>
