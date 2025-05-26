@@ -25,7 +25,7 @@
 </script>
 
 <div 
-    class="flex flex-col items-center mb-12 justify-between rounded-4xl w-auto object-cover h-70 mx-5" id={projectName.replaceAll(" ", "")} 
+    class="flex flex-col items-center mb-4 justify-between rounded-4xl w-auto object-cover h-70 mx-5" id={projectName.replaceAll(" ", "")} 
     style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url({image}); background-size: cover; background-position: center"
 >
     <h1 class="pt-5 text-2xl md:text-3xl xl:text-4xl text-center">{projectName}</h1>
