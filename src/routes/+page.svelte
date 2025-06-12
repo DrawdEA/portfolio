@@ -188,19 +188,19 @@
 </script>
 
 <Header />
-<div class="text-3xl flex flex-col gap-100 mt-30 md:mt-40 xl:mt-50 w-full items-center">
-    <div class="flex max-md:flex-col gap-20 justify-center items-center opacity-0 maindiv">
+<main class="text-3xl flex flex-col gap-100">
+    <section class="flex max-md:flex-col gap-20 justify-center items-center opacity-0 mt-25 mb-25 maindiv">
         <div class="flex flex-col max-md:items-center">
             <p class="text-5xl sm:text-6xl md:text-7xl xl:text-8xl" id="hello">Hello,</p>
             <p class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl pb-3" id="edward">I'm Edward Diesta.</p>
             <p class="text-lg sm:text-xl md:text-2xl xl:text-3xl" id="role">A <span class="bg-blue-900" id="software">Full-Stack Developer</span>.</p>
         </div>
         <div>
-            <img src={selfPortrait} alt="Self Protrait" class="h-55 w-55 md:h-60 md:w-60 xl:h-75 xl:w-75 object-fit rounded-full" id="portrait">
+            <img src={selfPortrait} alt="Edward Joshua Diesta's portrait" class="h-55 w-55 md:h-60 md:w-60 xl:h-75 xl:w-75 object-fit rounded-full" id="portrait">
         </div>
-    </div>
+    </section>
 
-    <div class="flex flex-col items-auto object-cover">
+    <section class="flex flex-col items-auto object-cover">
         <p class="pb-15 text-center text-3xl md:text-4xl xl:text-5xl break-normal mx-5 animatedText">Here are some of the things <span class="bg-blue-900" id="engineer">I'm working on</span>.</p>
         <Project projectName="Weather App" image={weatherapp} tools={["JavaScript", "HTML", "CSS", "Weather Crossing API"]} />
         <Project projectName="Guess My Prompt" image={guessmyprompt} tools={["Next.JS", "Zustand", "TailwindCSS", "DeepSeek R1 API"]} />
@@ -209,9 +209,9 @@
         <Project projectName="Ateneo Zen Garden Scenery Game" image={zengarden} tools={["Java", "Swing"]} />
         <Project projectName="Finance Stocks Simulator" image={cs50finance} tools={["Flask", "JavaScript", "HTML", "CSS"]} />
         <Project projectName="RPG Card Game" image={cardgame} tools={["Java", "Swing"]} />
-    </div>
+    </section>
 
-    <div class="flex flex-col items-center">
+    <section class="flex flex-col items-center">
         <p class="pb-15 text-center text-3xl md:text-4xl xl:text-5xl break-normal mx-5 animatedText2">
             These are what I use to <span class="bg-blue-900" id="create">create</span>.
         </p>
@@ -234,10 +234,10 @@
             <TechTool toolName="NumPy" image={numpy} />
             <TechTool toolName="Django" image={django} />
         </div>
-    </div>
+    </section>
 
-    <div class="flex flex-col items-center bg-background w-full pb-20 rounded-t-[4rem]">
-        <div class="flex flex-col items-center w-9/10 xl:w-3/4 mx-10 gap-4">
+    <section class="flex flex-col items-center bg-background w-full pb-20 rounded-t-[4rem]">
+        <div class="flex flex-col items-center w-9/10 mx-10 gap-4">
             <img src={arrow} alt="Arrow" class="w-auto h-20 rounded-4xl object-cover mb-40">
             
             <div class="flex flex-col items-center h-auto w-full bg-main rounded-4xl rounded-t-[4rem] gap-4 section p-10">
@@ -389,8 +389,8 @@
                 
             </div>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 <Footer />
 
 
