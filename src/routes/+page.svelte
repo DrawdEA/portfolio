@@ -1,5 +1,5 @@
 <script>
-    import { Project, TechTool } from "$lib/index.js";
+    import { Project, TechTool, Header, Footer } from "$lib/index.js";
     import selfPortrait from "$lib/images/portraits/edward.jpg";
 
     // Logo Images
@@ -187,6 +187,7 @@
     })
 </script>
 
+<Header />
 <div class="text-3xl flex flex-col gap-100 mt-30 md:mt-40 xl:mt-50 w-full items-center">
     <div class="flex max-md:flex-col gap-20 justify-center items-center opacity-0 maindiv">
         <div class="flex flex-col max-md:items-center">
@@ -235,7 +236,7 @@
         </div>
     </div>
 
-    <div class="flex flex-col items-center bg-[#252525] w-full pb-50 rounded-t-[4rem]">
+    <div class="flex flex-col items-center bg-background w-full pb-20 rounded-t-[4rem]">
         <div class="flex flex-col items-center w-9/10 xl:w-3/4 mx-10 gap-4">
             <img src={arrow} alt="Arrow" class="w-auto h-20 rounded-4xl object-cover mb-40">
             
@@ -390,5 +391,6 @@
         </div>
     </div>
 </div>
+<Footer />
 
 
