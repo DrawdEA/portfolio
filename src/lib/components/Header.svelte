@@ -15,6 +15,12 @@
   }
 </script>
 
+<style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+</style>
+
 <svelte:window on:scroll={handleScroll} />
 
 <header class="sticky top-0 z-50 flex justify-center py-4">
