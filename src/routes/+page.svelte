@@ -47,10 +47,13 @@
     import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
     import { SplitText } from "gsap/SplitText";
 	import { onMount } from 'svelte';
-	
 
     onMount(() => {
         gsap.registerPlugin(ScrollTrigger, SplitText);
+
+        window.onload = () => {
+            ScrollTrigger.refresh();
+        };
 
         // Hero texts.
         let tl = gsap.timeline();
@@ -112,13 +115,8 @@
         texttl.from(split.words, {
             y: "200%",
             autoAlpha: 0,
-            stagger: 0.1,
+            stagger: 0.03,
             opacity: 0
-        }).fromTo("#engineer", {
-            backgroundColor: "#121212",
-        }, {
-            backgroundColor: "#1c398e",
-            duration: 0.3,
         })
 
         // Second text.
@@ -136,35 +134,38 @@
         texttl2.from(split2.words, {
             y: "200%",
             autoAlpha: 0,
-            stagger: 0.1,
+            stagger: 0.03,
             opacity: 0
-        }).fromTo("#create", {
-            backgroundColor: "#121212",
-        }, {
-            backgroundColor: "#1c398e",
-            duration: 0.3,
         })
 
         // Tools.
         let tools = gsap.utils.toArray(".tool");
 
-        tools.forEach((tool) => {
-            gsap.from(tool, {
-                scrollTrigger: {
-                    trigger: tool,
-                    toggleActions: "play none none none",
-                    start: "100% 100%",
-                    end: "100% 100%",
-                    scrub: 1,
-                    once: true
-                },
+        gsap.from(".tool", {
+        scrollTrigger: {
+            trigger: "#tech-stack", // Trigger when the whole section comes into view
+            toggleActions: "play none none none",
+            start: "top 75%", // Start when the top of the section is 75% down the viewport
+            once: true,
+        },
+        y: 40,
+        opacity: 0,
+        duration: 0.4,
+        stagger: 0.05, // This will now work correctly, animating each tool in sequence.
+        });
 
-                y: "200%",
-                duration: 1,
-                stagger: 0.05,
-                opacity: 0
-            })
-        })
+        tools.forEach((tool) => {
+        const hoverTimeline = gsap.timeline({ paused: true });
+
+        hoverTimeline.to(tool, {
+            scale: 1.1, // A bit bigger for smaller icons
+            duration: 0.2,
+            ease: "power2.out",
+        });
+
+        tool.addEventListener("mouseenter", () => hoverTimeline.play());
+        tool.addEventListener("mouseleave", () => hoverTimeline.reverse());
+        });
 
         // About me.
         let sections = gsap.utils.toArray(".section");
@@ -201,19 +202,19 @@
     </section>
 
     <section class="flex flex-col items-auto object-cover pt-25" id="projects">
-        <p class="pb-15 text-center text-3xl md:text-4xl xl:text-5xl break-normal mx-5 animatedText">Here are some of the things <span class="bg-blue-900" id="engineer">I'm working on</span>.</p>
-        <Project projectName="Weather App" image={weatherapp} tools={["JavaScript", "HTML", "CSS", "Weather Crossing API"]} />
-        <Project projectName="Guess My Prompt" image={guessmyprompt} tools={["Next.JS", "Zustand", "TailwindCSS", "DeepSeek R1 API"]} />
-        <Project projectName="To-Do List" image={todolist} tools={["JavaScript", "HTML", "CSS"]} />
-        <Project projectName="DormVouch" image={dormvouch} tools={["JavaScript", "HTML", "CSS"]} />
-        <Project projectName="Ateneo Zen Garden Scenery Game" image={zengarden} tools={["Java", "Swing"]} />
+        <p class="pb-15 text-center text-3xl md:text-4xl xl:text-5xl break-normal mx-5 animatedText">Here are some of the things I'm working on.</p>
+        <Project link="https://drawdea.github.io/weather-app/" projectName="Weather App" image={weatherapp} tools={["JavaScript", "HTML", "CSS", "Weather Crossing API"]} />
+        <Project link="https://guess-my-prompt-six.vercel.app/" projectName="Guess My Prompt" image={guessmyprompt} tools={["Next.JS", "Zustand", "TailwindCSS", "DeepSeek R1 API"]} />
+        <Project link="https://drawdea.github.io/to-do-list/" projectName="To-Do List" image={todolist} tools={["JavaScript", "HTML", "CSS"]} />
+        <Project link="https://www.youtube.com/watch?v=IOjknlBMk3E" projectName="DormVouch" image={dormvouch} tools={["JavaScript", "HTML", "CSS"]} />
+        <Project link="https://github.com/DrawdEA/ateneo-zen-garden" projectName="Ateneo Zen Garden Scenery Game" image={zengarden} tools={["Java", "Swing"]} />
         <Project projectName="Finance Stocks Simulator" image={cs50finance} tools={["Flask", "JavaScript", "HTML", "CSS"]} />
-        <Project projectName="RPG Card Game" image={cardgame} tools={["Java", "Swing"]} />
+        <Project link="https://github.com/DrawdEA/card-game" projectName="RPG Card Game" image={cardgame} tools={["Java", "Swing"]} />
     </section>
 
     <section class="flex flex-col items-center pt-25" id="tech-stack">
         <p class="pb-15 text-center text-3xl md:text-4xl xl:text-5xl break-normal mx-5 animatedText2">
-            These are what I use to <span class="bg-blue-900" id="create">create</span>.
+            These are what I use to create.
         </p>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 items-stretch justify-stretch">
             <TechTool toolName="Next.JS" image={nextjs} />
@@ -279,26 +280,29 @@
                         
                     </div>
 
-                    <div class="flex flex-col items-center h-full w-full bg-main rounded-4xl gap-4 section p-10">
-                        <p class="text-2xl text-center">Like what you see? Let's connect!</p>
-                        <div class="flex flex-col w-full h-full gap-4 text-3xl">
-                            <div class="flex flex-col md:flex-row h-full gap-4">
-                                <div class="flex items-center justify-center w-full h-full rounded-4xl object-cover text-center bg-[#4267B2]">
-                                    <p>Facebook</p>
-                                </div>
-                                <div class="flex items-center justify-center w-full h-full rounded-4xl object-cover text-center bg-[#2b3137]">
-                                    <p>GitHub</p>
-                                </div>
-                            </div>
-                            <div class="flex flex-col md:flex-row w-full h-full gap-4">
-                                <div class="flex items-center justify-center w-full h-full rounded-4xl object-cover text-center bg-[#24292e]">
-                                    <p>Email</p>
-                                </div>
-                                <div class="flex items-center justify-center w-full h-full rounded-4xl object-cover text-center bg-[#0a66c2]">
-                                    <p>LinkedIn</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div
+                    class="flex flex-col items-center justify-center h-full w-full bg-main rounded-4xl gap-6 section p-10"
+                    >
+                    <p class="text-2xl text-center">Like what you see? Let's connect!</p>
+
+                    <div
+                        class="flex flex-col sm:flex-row items-center justify-center gap-6 mt-4"
+                    >
+                        <a
+                        href="/resume.pdf"
+                        download="EdwardDiesta_Resume.pdf"
+                        class="group inline-block rounded-xl bg-blue-900 px-6 py-2 text-lg text-white transition-transform duration-300 ease-in-out hover:scale-105"
+                        >
+                        Download Resume
+                        </a>
+
+                        <a
+                        href="mailto:edward.joshua.diesta@student.ateneo.edu"
+                        class="group inline-block rounded-xl bg-gray-700 px-6 py-2 text-lg text-white transition-transform duration-300 ease-in-out hover:scale-105"
+                        >
+                        Email Me
+                        </a>
+                    </div>
                     </div>
                 </div>
             </div>
