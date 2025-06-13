@@ -204,8 +204,8 @@
 </script>
 
 <Header />
-<main class="text-3xl flex flex-col gap-100">
-    <section class="flex max-md:flex-col gap-20 justify-center items-center opacity-0 mt-25 mb-25 maindiv">
+<main class="text-3xl flex flex-col gap-25 -pt-10">
+    <section class="flex max-md:flex-col gap-20 justify-center items-center opacity-0 mb-25 h-[calc(100vh_-_6rem)] maindiv">
         <div class="flex flex-col max-md:items-center">
             <p class="text-5xl sm:text-6xl md:text-7xl xl:text-8xl" id="hello">Hello,</p>
             <p class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl pb-3" id="edward">I'm Edward Diesta.</p>
@@ -227,7 +227,7 @@
         <Project link="https://github.com/DrawdEA/card-game" projectName="RPG Card Game" image={cardgame} tools={["Java", "Swing"]} />
     </section>
 
-    <section class="flex flex-col items-center pt-25" id="tech-stack">
+    <section class="flex flex-col items-center py-25" id="tech-stack">
         <p class="pb-15 text-center text-3xl md:text-4xl xl:text-5xl break-normal mx-5 animatedText2">
             These are what I use to create.
         </p>
