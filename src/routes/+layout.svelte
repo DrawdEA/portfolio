@@ -3,9 +3,9 @@
   <title>Edward Diesta</title>
   <meta
     name="description"
-    content="My name is Edward Diesta, a full-stack developer based in Manila, Philippines. 
-	Currently pursuing a Computer Science degree at Ateneo de Manila University, I aim to make 
-	an impact in the tech and entrepreneurial landscape."
+    content="Welcome to the portfolio of Edward Diesta, a passionate 
+	Full-Stack Developer and Computer Science student at Ateneo de Manila. 
+	Explore my projects, tech stack, and journey in software development."
   />
   <meta
     name="keywords"
@@ -27,9 +27,9 @@
   <meta property="og:title" content="Edward Diesta" />
   <meta
     property="og:description"
-    content="My name is Edward Diesta, a full-stack developer based in Manila, Philippines. 
-	Currently pursuing a Computer Science degree at Ateneo de Manila University, I aim to make 
-	an impact in the tech and entrepreneurial landscape."
+    content="Welcome to the portfolio of Edward Diesta, a passionate 
+	Full-Stack Developer and Computer Science student at Ateneo de Manila. 
+	Explore my projects, tech stack, and journey in software development."
   />
   <meta property="og:site_name" content="Edward Diesta Portfolio" />
   <meta
@@ -46,9 +46,9 @@
   <meta name="twitter:title" content="Edward Diesta" />
   <meta
     name="twitter:description"
-    content="My name is Edward Diesta, a full-stack developer based in Manila, Philippines. 
-	Currently pursuing a Computer Science degree at Ateneo de Manila University, I aim to make 
-	an impact in the tech and entrepreneurial landscape."
+    content="Welcome to the portfolio of Edward Diesta, a passionate 
+	Full-Stack Developer and Computer Science student at Ateneo de Manila. 
+	Explore my projects, tech stack, and journey in software development."
   />
   <meta name="twitter:creator" content="@edwarddiesta" />
   <meta
