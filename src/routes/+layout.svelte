@@ -40,6 +40,7 @@
   <meta property="og:image:height" content="600" />
   <meta property="og:image:alt" content="Edward Diesta Portfolio" />
   <meta property="og:image:type" content="image/jpeg" />
+  <meta name="google-site-verification" content="VKVRUCTdO7K4qExdQjicsuE0oXrEhMLfTFgCpAWEJjw" />
 
   <!-- Twitter Card (for Twitter/X) -->
   <meta name="twitter:card" content="summary_large_image" />
