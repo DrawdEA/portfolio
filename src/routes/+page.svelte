@@ -327,7 +327,7 @@
                     <p class="text-2xl md:text-3xl xl:text-4xl text-center">One Big Fight</p>
                     <img src={ateneo} alt="Ateneo Logo" class="h-35 my-4 object-contain">
                     <p class="text-sm md:text-base xl:text-lg">
-                        I am currently a Computer Science at <span class="bg-blue-900">Ateneo de Manila University</span> as an <span class="bg-yellow-700">Ateneo Freshman Merit Scholar</span> 
+                        I am currently a Computer Science student at <span class="bg-blue-900">Ateneo de Manila University</span> as an <span class="bg-yellow-700">Ateneo Freshman Merit Scholar</span> 
                         (Only the top 60 out of all the passers receive this award, the highest possible distinction 
                         awarded to first-year students!).
                     </p>
