@@ -112,7 +112,7 @@
             opacity: 0,
             duration: 0.6,
             },
-            "+=0.2",
+            "<+0.1",
         );
 
         // First text.
