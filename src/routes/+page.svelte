@@ -200,7 +200,7 @@
         </div>
     </section>
 
-    <section class="flex flex-col items-auto object-cover">
+    <section class="flex flex-col items-auto object-cover pt-25" id="projects">
         <p class="pb-15 text-center text-3xl md:text-4xl xl:text-5xl break-normal mx-5 animatedText">Here are some of the things <span class="bg-blue-900" id="engineer">I'm working on</span>.</p>
         <Project projectName="Weather App" image={weatherapp} tools={["JavaScript", "HTML", "CSS", "Weather Crossing API"]} />
         <Project projectName="Guess My Prompt" image={guessmyprompt} tools={["Next.JS", "Zustand", "TailwindCSS", "DeepSeek R1 API"]} />
@@ -211,7 +211,7 @@
         <Project projectName="RPG Card Game" image={cardgame} tools={["Java", "Swing"]} />
     </section>
 
-    <section class="flex flex-col items-center">
+    <section class="flex flex-col items-center pt-25" id="tech-stack">
         <p class="pb-15 text-center text-3xl md:text-4xl xl:text-5xl break-normal mx-5 animatedText2">
             These are what I use to <span class="bg-blue-900" id="create">create</span>.
         </p>
@@ -236,7 +236,7 @@
         </div>
     </section>
 
-    <section class="flex flex-col items-center bg-background w-full pb-20 rounded-t-[4rem]">
+    <section class="flex flex-col items-center bg-background w-full pb-20 rounded-t-[4rem] scroll-mt-25" id="about">
         <div class="flex flex-col items-center w-9/10 mx-10 gap-4">
             <img src={arrow} alt="Arrow" class="w-auto h-20 rounded-4xl object-cover mb-40">
             
