@@ -1,3 +1,70 @@
+<svelte:head>
+  <!-- Basic Metadata -->
+  <title>Edward Diesta</title>
+  <meta
+    name="description"
+    content="My name is Edward Diesta, a full-stack developer based in Manila, Philippines. 
+	Currently pursuing a Computer Science degree at Ateneo de Manila University, I aim to make 
+	an impact in the tech and entrepreneurial landscape."
+  />
+  <meta
+    name="keywords"
+    content="Software Developer, Web Developer, Philippines, Manila, Computer Science, Ateneo, Ateneo de Manila University,
+	Portfolio, Full-Stack Developer, React, Next.js, HTML, CSS, JavaScript, Machine Learning, CS50, Harvard, Stanford,
+	Machine Learning Specialization, DeepLearning.AI, The Odin Project, Svelte, Management Information Systems Association, MISA, CompSAt
+	Computer Society of the Ateneo, Ateneo Student Residents Association, ARSA"
+  />
+  <meta name="author" content="Edward Diesta" />
+  <meta name="publisher" content="Edward Diesta" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://diesta.dev" />
+
+  <!-- Open Graph (for Facebook, LinkedIn, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://diesta.dev" />
+  <meta property="og:title" content="Edward Diesta" />
+  <meta
+    property="og:description"
+    content="My name is Edward Diesta, a full-stack developer based in Manila, Philippines. 
+	Currently pursuing a Computer Science degree at Ateneo de Manila University, I aim to make 
+	an impact in the tech and entrepreneurial landscape."
+  />
+  <meta property="og:site_name" content="Edward Diesta Portfolio" />
+  <meta
+    property="og:image"
+    content="https://diesta.dev/images/edward-diesta-portfolio.png"
+  />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:image:alt" content="Edward Diesta Portfolio" />
+  <meta property="og:image:type" content="image/jpeg" />
+
+  <!-- Twitter Card (for Twitter/X) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Edward Diesta" />
+  <meta
+    name="twitter:description"
+    content="My name is Edward Diesta, a full-stack developer based in Manila, Philippines. 
+	Currently pursuing a Computer Science degree at Ateneo de Manila University, I aim to make 
+	an impact in the tech and entrepreneurial landscape."
+  />
+  <meta name="twitter:creator" content="@edwarddiesta" />
+  <meta
+    name="twitter:image"
+    content="https://diesta.dev/images/edward-diesta-portfolio.png"
+  />
+  <meta name="twitter:image:alt" content="Edward Diesta" />
+
+  <!-- Robots / Search Engine Directives -->
+  <meta name="robots" content="index, follow" />
+  <meta
+    name="googlebot"
+    content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  />
+</svelte:head>
+
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import '../app.css';
