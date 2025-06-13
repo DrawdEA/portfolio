@@ -37,7 +37,7 @@
     content="https://diesta.dev/images/edward-diesta-portfolio.png"
   />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="600" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Edward Diesta Portfolio" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta name="google-site-verification" content="VKVRUCTdO7K4qExdQjicsuE0oXrEhMLfTFgCpAWEJjw" />
