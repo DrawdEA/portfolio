@@ -66,39 +66,54 @@
             type: "words"
         })
 
-        tl
-        .to(".maindiv", {
+        tl.to(".maindiv", {
             duration: 0,
-            opacity: 1
+            opacity: 1,
         })
         .from("#hello", {
-            duration: 0.5,
+            duration: 0.4,
             y: "100%",
             opacity: 0,
-            yoyo: true
         })
-        .from(heroSplit.words, {
+        .from(
+            heroSplit.words,
+            {
             opacity: 0,
-            duration: 1,
+            duration: 0.7,
             y: "100%",
-            stagger: 0.1
-        }, "+=0.1")
-        .from("#portrait", {
-            opacity: 0,
-            duration: 0.5,
-        }, "+=0.1")
-        .from(softwareSplit.words, {
+            stagger: 0.04,
+            },
+            "<+0.1",
+        )
+        .from(
+            softwareSplit.words,
+            {
             opacity: 0,
             y: "100%",
-            duration: 1,
-            stagger: 0.1
-        }, "+=0.1")
-        .fromTo("#software", {
+            duration: 0.7,
+            stagger: 0.04,
+            },
+            "<+0.2",
+        )
+        .fromTo(
+            "#software",
+            {
             backgroundColor: "#121212",
-        }, {
+            },
+            {
             backgroundColor: "#1c398e",
-            duration: 0.5,
-        })
+            duration: 0.4,
+            },
+            "<+0.4",
+        )
+        .from(
+            "#portrait",
+            {
+            opacity: 0,
+            duration: 0.6,
+            },
+            "+=0.2",
+        );
 
         // First text.
         let split = SplitText.create(".animatedText", {
