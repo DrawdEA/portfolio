@@ -85,35 +85,48 @@
       class="relative rounded-2xl bg-background/90 backdrop-blur-lg shadow-2xl px-8 py-10 flex flex-col gap-6 w-[90vw] max-w-xs"
       on:click|stopPropagation
     >
-      <!-- Close button, top right, round and with hover effect -->
+      <!-- Close button -->
       <button
         class="absolute top-4 right-4 rounded-full p-2 text-gray-400 hover:bg-gray-800/60 hover:text-white transition-colors text-2xl"
         on:click={closeMenu}
         aria-label="Close menu"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
         </svg>
       </button>
+
+      <!-- Add on:click={closeMenu} to each link -->
       <a
-        href="/projects"
+        href="#projects"
         class="block text-lg font-semibold text-gray-100 rounded-lg px-4 py-3 transition hover:bg-gray-800/60 hover:text-white focus:bg-gray-800/80 focus:outline-none"
-        >Projects</a
+        on:click={closeMenu}>Projects</a
       >
       <a
-        href="/tech-stack"
+        href="#tech-stack"
         class="block text-lg font-semibold text-gray-100 rounded-lg px-4 py-3 transition hover:bg-gray-800/60 hover:text-white focus:bg-gray-800/80 focus:outline-none"
-        >Tech Stack</a
+        on:click={closeMenu}>Tech Stack</a
       >
       <a
-        href="/about"
+        href="#about"
         class="block text-lg font-semibold text-gray-100 rounded-lg px-4 py-3 transition hover:bg-gray-800/60 hover:text-white focus:bg-gray-800/80 focus:outline-none"
-        >About</a
+        on:click={closeMenu}>About</a
       >
       <a
-        href="/blog"
+        href="/"
         class="block text-lg font-semibold text-gray-100 rounded-lg px-4 py-3 transition hover:bg-gray-800/60 hover:text-white focus:bg-gray-800/80 focus:outline-none"
-        >Blog</a
+        on:click={closeMenu}>Blog</a
       >
     </div>
   </div>

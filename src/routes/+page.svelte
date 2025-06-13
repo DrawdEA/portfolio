@@ -238,7 +238,7 @@
 
     <section class="flex flex-col items-center bg-background w-full pb-20 rounded-t-[4rem] scroll-mt-25" id="about">
         <div class="flex flex-col items-center w-9/10 mx-10 gap-4">
-            <img src={arrow} alt="Arrow" class="w-auto h-20 rounded-4xl object-cover mb-40">
+            <img src={arrow} alt="Arrow" class="w-auto h-20 rounded-4xl object-cover mb-10">
             
             <div class="flex flex-col items-center h-auto w-full bg-main rounded-4xl rounded-t-[4rem] gap-4 section p-10">
                 <p class="pb-4 text-center text-2xl md:text-3xl xl:text-4xl break-normal mx-5">
