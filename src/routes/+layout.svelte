@@ -67,7 +67,9 @@
 </svelte:head>
 
 <script lang="ts">
+	import { Header, Footer } from "$lib/index.js";
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';  
 	import '../app.css';
 
 	interface Window {
@@ -96,7 +98,9 @@
 	class="flex flex-col items-center h-auto bg-cover font-inter font-extrabold header finisher-header mx-auto max-w-6xl" 
 	style="position: relative; z-index: 1;"
 >
+	<Header />
 	{@render children()}
+	<Footer />
 </div>
 
 

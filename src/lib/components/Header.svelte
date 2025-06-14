@@ -32,10 +32,10 @@
     <a href="/" class="text-lg font-bold text-white">Edward Diesta</a>
     <nav class="hidden md:flex">
       <ul class="flex items-center gap-6 text-sm text-gray-400">
-        <li><a href="#projects" class="hover:text-white">Projects</a></li>
-        <li><a href="#tech-stack" class="hover:text-white">Tech Stack</a></li>
-        <li><a href="#about" class="hover:text-white">About</a></li>
-        <li><a href="/" class="hover:text-white">Blog</a></li>
+        <li><a href="/#projects" class="hover:text-white">Projects</a></li>
+        <li><a href="/#tech-stack" class="hover:text-white">Tech Stack</a></li>
+        <li><a href="/#about" class="hover:text-white">About</a></li>
+        <li><a href="/blog" class="hover:text-white">Blog</a></li>
       </ul>
     </nav>
     <div class="md:hidden">
@@ -130,7 +130,7 @@
         on:click={closeMenu}>About</a
       >
       <a
-        href="/"
+        href="/blog"
         class="block text-lg font-semibold text-gray-100 rounded-lg px-4 py-3 transition hover:bg-gray-800/60 hover:text-white focus:bg-gray-800/80 focus:outline-none"
         on:click={closeMenu}>Blog</a
       >

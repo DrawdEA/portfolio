@@ -1,4 +1,4 @@
-<footer class="w-full py-8 flex justify-center bg-background text-gray-400">
+<footer class="w-full py-8 flex justify-center bg-transparent text-gray-400">
   <div class="w-full max-w-5xl flex flex-col items-center gap-4 sm:flex-row sm:justify-between px-6">
     <p class="text-center sm:text-left text-base font-bold ">
       &copy; {new Date().getFullYear()} Edward Joshua Diesta. All Rights Reserved.
