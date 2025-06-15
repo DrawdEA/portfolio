@@ -27,7 +27,7 @@
   <div class="relative flex w-auto items-center justify-center gap-4 rounded-lg px-6 py-2 transition-colors duration-300 md:gap-10
     {isScrolled
       ? 'bg-background/80 backdrop-blur-sm shadow-lg'
-      : 'bg-main'}"
+      : 'bg-transparent'}"
   >
     <a href="/" class="text-lg font-bold text-white">Edward Diesta</a>
     <nav class="hidden md:flex">

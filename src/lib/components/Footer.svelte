@@ -1,4 +1,42 @@
-<footer class="w-full py-8 flex justify-center bg-transparent text-gray-400">
+<script>
+  // The email address to be copied
+  let email = "edwardjoshua.diesta@gmail.com";
+
+  // Reactive state variables
+  let copied = false;
+  let tooltipText = "Copy email";
+
+  // This function handles the click event
+  const copyEmail = async () => {
+      // Prevent running again if already in "copied" state
+      if (copied) return;
+
+      try {
+      await navigator.clipboard.writeText(email);
+
+      // --- Success State ---
+      copied = true;
+      tooltipText = "Copied!";
+
+      // Reset the state after 2 seconds
+      setTimeout(() => {
+          copied = false;
+          tooltipText = "Copy email";
+      }, 2000);
+      } catch (err) {
+      // --- Error State ---
+      console.error("Failed to copy email: ", err);
+      tooltipText = "Copy failed!";
+
+      // Reset the tooltip text after 2 seconds
+      setTimeout(() => {
+          tooltipText = "Copy email";
+      }, 2000);
+      }
+  };
+</script>
+
+<footer class="w-full py-8 flex justify-center bg-transparent text-gray-400" id="footer">
   <div class="w-full max-w-5xl flex flex-col items-center gap-4 sm:flex-row sm:justify-between px-6">
     <p class="text-center sm:text-left text-base font-bold ">
       &copy; {new Date().getFullYear()} Edward Joshua Diesta. All Rights Reserved.
@@ -57,6 +95,91 @@
             </svg>
           </a>
         </li>
+        <li class="flex items-center pl-2">
+          <!-- The `relative` class is removed, and `flex items-center` is added -->
+          <button
+              on:click={copyEmail}
+              aria-label="Copy email address"
+              class="group transition-colors hover:text-white"
+          >
+              {#if copied}
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28px"
+                  height="28px"
+                  viewBox="0 -960 960 960"
+                  fill="currentColor"
+                  
+              >
+                  <path d="M382-240 154-468l57-57 171 171 367-367 57 57z" />
+              </svg>
+              {:else}
+              <!-- Default Icon: Mail -->
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28px"
+                  height="28px"
+                  viewBox="0 -960 960 960"
+                  fill="currentColor"
+                  class="block group-hover:hidden"
+              >
+                  <path
+                  d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160zm320-280L160-640v400h640v-400zm0-80 320-200H160zM160-640v-80 480z"
+                  />
+              </svg>
+              <!-- Hover Icon: Copy -->
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28px"
+                  height="28px"
+                  viewBox="0 -960 960 960"
+                  fill="currentColor"
+                  class="hidden group-hover:block"
+              >
+                  <path
+                  d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240zm0-80h360v-480H360zM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80zm160-240v-480z"
+                  />
+              </svg>
+              {/if}
+          </button>
+          </li>
+
+          <!-- Portfolio / Resume Link -->
+          <li class="pl-2">
+          <a
+              href="/resume.pdf"
+              download="EdwardDiesta_Resume.pdf"
+              aria-label="Download Portfolio"
+              class="group transition-colors hover:text-white"
+          >
+              <!-- Default Icon: Portfolio -->
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28px"
+              height="28px"
+              viewBox="0 -960 960 960"
+              fill="currentColor"
+              class="block group-hover:hidden"
+              >
+              <path
+                  d="M480-240q-56 0-107 17.5T280-170v10h400v-10q-42-35-93-52.5T480-240m0-80q69 0 129 21t111 59v-560H240v560q51-38 111-59t129-21m0-160q-25 0-42.5-17.5T420-540t17.5-42.5T480-600t42.5 17.5T540-540t-17.5 42.5T480-480M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80zm240-320q58 0 99-41t41-99-41-99-99-41-99 41-41 99 41 99 99 41m0-140"
+              />
+              </svg>
+              <!-- Hover Icon: Download -->
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28px"
+              height="28px"
+              viewBox="0 -960 960 960"
+              fill="currentColor"
+              class="hidden group-hover:block"
+              >
+              <path
+                  d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58zM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160z"
+              />
+              </svg>
+          </a>
+          </li>
       </ul>
     </nav>
   </div>
