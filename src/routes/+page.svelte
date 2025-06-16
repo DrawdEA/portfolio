@@ -250,8 +250,8 @@
 </script>
 
 <main class="text-3xl flex flex-col gap-25 ">
-    <section class="flex max-md:flex-col gap-10 md:gap-20 justify-center items-center max-md:-translate-y-[3rem] opacity-0 h-[calc(100vh_-_6rem)] maindiv">
-        <div class="flex flex-col max-md:items-center">
+    <section class="flex max-lg:flex-col gap-10 md:gap-20 justify-center items-center max-md:-translate-y-[3rem] opacity-0 h-[calc(100vh_-_6rem)] maindiv">
+        <div class="flex flex-col max-lg:items-center">
             <p class="text-5xl sm:text-6xl md:text-7xl xl:text-8xl" id="hello">Hello,</p>
             <p class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl md:pb-2" id="edward">I'm Edward Diesta.</p>
             <p class="text-lg sm:text-xl md:text-2xl xl:text-3xl" id="role">A <span class="bg-blue-900" id="software">Full-Stack Developer</span>.</p>
