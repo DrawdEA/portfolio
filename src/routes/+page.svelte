@@ -455,7 +455,7 @@
         <Project link="https://register.misa.org.ph/" projectName="Ateneo MISA Registration System" image={misa} tools={["Next.JS", "React", "Javascript", "HTML", "CSS", "Prisma"]} />
         <Project link="https://ateneoarsa.org/" projectName="Ateneo ARSA Website" image={arsa} tools={["Next.JS", "React", "Javascript", "HTML", "CSS", "Strapi"]} />
         <Project link="https://github.com/DrawdEA/harbor-ph" projectName="Harbor.PH Social Media Platform" image={harbor} tools={["Next.JS", "React", "Javascript", "HTML", "CSS", "Supabase", "Prisma"]} />
-        <Project link="https://github.com/DrawdEA/art-ap-website" projectName="A Tribute to Web Development Cinematic" image={artap} tools={["Next.JS", "React", "Javascript", "HTML", "CSS", "Framer Motion"]} />
+        <Project link="https://artap.diesta.dev/" projectName="A Tribute to Web Development Cinematic" image={artap} tools={["Next.JS", "React", "Javascript", "HTML", "CSS", "Framer Motion"]} />
         <Project link="https://dorm.diesta.dev/" projectName="Dorm Residency Form In Minutes" image={dorm} tools={["Next.JS", "React", "Javascript", "HTML", "CSS"]} />
         <Project link="https://drawdea.github.io/weather-app/" projectName="Weather App" image={weatherapp} tools={["JavaScript", "HTML", "CSS", "Weather Crossing API"]} />
         <Project link="https://guess-my-prompt-six.vercel.app/" projectName="Guess My Prompt" image={guessmyprompt} tools={["Next.JS", "Zustand", "TailwindCSS", "DeepSeek R1 API"]} />
